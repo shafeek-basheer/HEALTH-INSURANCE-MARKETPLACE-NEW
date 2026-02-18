@@ -2,7 +2,7 @@
 The Health Insurance Marketplace offers thousands of insurance plans across states and years, making it difficult to understand differences in costs, coverage, and benefits. This project aims to analyze marketplace data to identify trends in benefit coverage, cost-sharing, and plan availability across states and business years.Here we are only analysis on Benefit_cost sharing.
 ## Project Structure
 ```
-COVID-19-Vaccination-Outcomes-EDA/
+HEALTH-INSURANCE-MARKETPLACE-EDA/
 │
 ├── README.md                          <-- You are here
 ├── data/

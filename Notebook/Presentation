@@ -37,3 +37,32 @@ Insurance market plans contribute to:
 * Standardized benefit structures
 * Consumer protection
 the insurance market plan is a structured and regulated system that connects insurance providers and customers. It ensures financial security for individuals while allowing companies to operate competitively and sustainably within the healthcare industry.
+=============================================================================================
+==========================***************==================================================================
+After understanding the overall structure of the insurance market, our next step was to focus on benefit coverage analysis.
+For that i take raw data from the kaggle.There is i found the Health Insurance Marketplace(Explore health and dental plans data in the US Health Insurance Marketplace).About that data set:
+The Health Insurance Marketplace Public Use Files contain data on health and dental plans offered to individuals and small businesses through the US Health Insurance Marketplace.Basically that data set contain more csv files.i choose only one file from that becuse of my memory issuess.
+lets us start our analysis from here:
+Am using pandas,numpy,matplotlib,and seaborn these libraries for analysis.
+"C:\Users\hp\OneDrive\Desktop\project\BenefitsCostSharing.csv".
+is contains (5048408, 32).And most of the columns are contain object values .In this case analysis little defficult.
+
+import numpy as np 
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+Benefit_cost=pd.read_csv(r"C:\Users\hp\OneDrive\Desktop\project\BenefitsCostSharing.csv",low_memory=False)
+	BenefitName	BusinessYear	CoinsInnTier1	CoinsInnTier2	CoinsOutofNet	CopayInnTier1	CopayInnTier2	CopayOutofNet	EHBVarReason	Exclusions	...	LimitUnit	MinimumStay	PlanId	QuantLimitOnSvc	RowNumber	SourceName	StandardComponentId	StateCode	StateCode2	VersionNum
+0	Routine Dental Services (Adult)	2014	20%	NaN	20%	No Charge	NaN	No Charge	Above EHB	NaN	...	Dollars per Year	NaN	21989AK0010001-00	Yes	68	HIOS	21989AK0010001	AK	AK	6
+1	Dental Check-Up for Children	2014	20%	NaN	20%	No Charge	NaN	No Charge	Substantially Equal	NaN	...	Visit(s) per 6 Months	NaN	21989AK0010001-00	Yes	104	HIOS	21989AK0010001	AK	AK	6
+2	Basic Dental Care - Child	2014	40%	NaN	40%	No Charge	NaN	No Charge	Substantially Equal	NaN	...	NaN	NaN	21989AK0010001-00	NaN	110	HIOS	21989AK0010001	AK	AK	6
+3	Orthodontia - Child	2014	50%	NaN	50%	No Charge	NaN	No Charge	Additional EHB Benefit	NaN	...	NaN	NaN	21989AK0010001-00	NaN	111	HIOS	21989AK0010001	AK	AK	6
+4	Major Dental Care - Child	2014	50%	NaN	50%	No Charge	NaN	No Charge	Substantially Equal	NaN	...	NaN	NaN	21989AK0010001-00	NaN	112	HIOS	21989AK0010001	AK	AK	6
+...	...	...	...	...	...	...	...	...	...	...	...	...	...	...	...	...	...	...	...	...	...
+5048403	Major Dental Care - Child	2016	50% Coinsurance after deductible	NaN	50% Coinsurance after deductible	Not Applicable	NaN	Not Applicable	NaN	NaN	...	NaN	NaN	96480WV0110003-00	NaN	112	SERFF	96480WV0110003	WV	WV	2
+5048404	Basic Dental Care - Adult	2016	NaN	NaN	NaN	NaN	NaN	NaN	NaN	NaN	...	NaN	NaN	96480WV0110003-00	NaN	113	SERFF	96480WV0110003	WV	WV	2
+5048405	Orthodontia - Adult	2016	NaN	NaN	NaN	NaN	NaN	NaN	NaN	NaN	...	NaN	NaN	96480WV0110003-00	NaN	114	SERFF	96480WV0110003	WV	WV	2
+5048406	Major Dental Care - Adult	2016	NaN	NaN	NaN	NaN	NaN	NaN	NaN	NaN	...	NaN	NaN	96480WV0110003-00	NaN	115	SERFF	96480WV0110003	WV	WV	2
+5048407	Accidental Dental	2016	NaN	NaN	NaN	NaN	NaN	NaN	NaN	NaN	...	NaN	NaN	96480WV0110003-00	NaN	118	SERFF	96480WV0110003	WV	WV	2
+5048408 rows × 32 columns
